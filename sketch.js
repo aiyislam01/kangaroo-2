@@ -1,7 +1,7 @@
 /*--------------------------------------------------------*/
 var PLAY = 1;
 var END = 0;
-var WIN = 2;  
+var WIN = 2;
 var gameState = PLAY;
 
 var trex, trex_running, trex_collided;
@@ -14,17 +14,17 @@ var score=0;
 var gameOver, restart;
 
 function preload(){
-  kangaroo_running = loadAnimation("kangaroo1.png","kangaroo2.png","kangaroo3.png");
-  kangaroo_collided = loadAnimation("kangaroo1.png");
-  jungleImage = loadImage("bg.png");
-  shrub1 = loadImage("shrub1.png");
-  shrub2 = loadImage("shrub2.png");
-  shrub3 = loadImage("shrub3.png");
-  obstacle1 = loadImage("stone.png");
-  gameOverImg = loadImage("gameOver.png");
-  restartImg = loadImage("restart.png");
-  jumpSound = loadSound("jump.wav");
-  collidedSound = loadSound("collided.wav");
+  kangaroo_running =   loadAnimation("assets/kangaroo1.png","assets/kangaroo2.png","assets/kangaroo3.png");
+  kangaroo_collided = loadAnimation("assets/kangaroo1.png");
+  jungleImage = loadImage("assets/bg.png");
+  shrub1 = loadImage("assets/shrub1.png");
+  shrub2 = loadImage("assets/shrub2.png");
+  shrub3 = loadImage("assets/shrub3.png");
+  obstacle1 = loadImage("assets/stone.png");
+  gameOverImg = loadImage("assets/gameOver.png");
+  restartImg = loadImage("assets/restart.png");
+  jumpSound = loadSound("assets/jump.wav");
+  collidedSound = loadSound("assets/collided.wav");
 }
 
 function setup() {
@@ -193,49 +193,12 @@ function spawnObstacles() {
   }
 }
 
-/*function reset(){
-  gameState = PLAY;
-  gameOver.visible = true;
-  restart.visible = true;
-  kangaroo.visible = true;
-  kangaroo.changeAnimation("running",
-                kangaroo_running);
-  obstaclesGroup.Each();
-  shrubsGroup.destroyEach();
-  score = 0;
-}*/
-
-/*function reset(){
-  gameState = PLAY;
-  gameOver.visible = false;
-  restart.visible = false;
-  kangaroo.visible = true;
-  kangaroo.changeAnimation("running",
-               kangaroo_running);
-  obstaclesGroup.destroyEach();
-  shrubsGroup.destroyEach();
-
-}*/
-
-/*function reset(){
-  gameState = PLAY;
-  gameOver.visible = false;
-  restart.visible = false;
-  kangaroo.visible = false;
-  kangaroo.changeAnimation("running",
-               kangaroo_running);
-  obstaclesGroup.destroyeach();
-  shrubsGroup.destroyeach();
-  score = 0;
-}*/
-
 function reset(){
   gameState = PLAY;
   gameOver.visible = false;
   restart.visible = false;
   kangaroo.visible = true;
-  kangaroo.changeAnimation("running",
-               kangaroo_running);
+  kangaroo.changeAnimation("running", kangaroo_running);
   obstaclesGroup.destroyEach();
   shrubsGroup.destroyEach();
   score = 0;
